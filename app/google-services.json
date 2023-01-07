@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "608793136933",
+    "firebase_url": "https://spotifyanime-ef431-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "spotifyanime-ef431",
+    "storage_bucket": "spotifyanime-ef431.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608793136933:android:8dc7993231fc72559414cc",
+        "android_client_info": {
+          "package_name": "com.example.spotifyanime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608793136933-vp2seu5aer0akjpe9g5oebc27nb3d61f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4kXdrLO2_ZOKnlbuy-d7kUz-xz1-NpNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608793136933-vp2seu5aer0akjpe9g5oebc27nb3d61f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
