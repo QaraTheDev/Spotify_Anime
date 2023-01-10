@@ -2,11 +2,14 @@ package com.example.spotifyanime.ui.auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.spotifyanime.R
 import com.example.spotifyanime.databinding.ActivityLoginBinding
 import com.example.spotifyanime.util.toast
+import dagger.hilt.android.AndroidEntryPoint
 
 class LoginActivity : AppCompatActivity(), AuthListener {
 
