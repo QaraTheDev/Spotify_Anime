@@ -1,6 +1,6 @@
 package com.example.spotifyanime.data.repositories
 
-import com.example.spotifyanime.data.Resource
+import com.example.spotifyanime.Resource
 import com.example.spotifyanime.data.utils.await
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser

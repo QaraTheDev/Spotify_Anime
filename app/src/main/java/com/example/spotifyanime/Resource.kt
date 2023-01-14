@@ -1,4 +1,4 @@
-package com.example.spotifyanime.data
+package com.example.spotifyanime
 
 import java.lang.Exception
 
