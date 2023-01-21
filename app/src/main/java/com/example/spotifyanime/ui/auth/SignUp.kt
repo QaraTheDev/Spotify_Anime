@@ -38,6 +38,7 @@ fun SignUpScreen(viewModel: AuthViewModel?, navController: NavHostController) {
     var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    val maxChar = 30
 
     val signupFlow = viewModel?.signUpFlow?.collectAsState()
 
@@ -65,7 +66,8 @@ fun SignUpScreen(viewModel: AuthViewModel?, navController: NavHostController) {
         TextField(
             value = name,
             onValueChange = {
-                name = it
+                if (it.length <= maxChar)
+                    name = it
             },
             label = {
                 Text(text = stringResource(id = R.string.name), color = Color.White)
@@ -92,7 +94,8 @@ fun SignUpScreen(viewModel: AuthViewModel?, navController: NavHostController) {
         TextField(
             value = email,
             onValueChange = {
-                email = it
+                if (it.length <= maxChar)
+                    email = it
             },
             label = {
                 Text(text = stringResource(id = R.string.email), color = Color.White)
@@ -119,7 +122,8 @@ fun SignUpScreen(viewModel: AuthViewModel?, navController: NavHostController) {
         TextField(
             value = password,
             onValueChange = {
-                password = it
+                if (it.length <= maxChar)
+                    password = it
             },
             label = {
                 Text(text = stringResource(id = R.string.password), color = Color.White)

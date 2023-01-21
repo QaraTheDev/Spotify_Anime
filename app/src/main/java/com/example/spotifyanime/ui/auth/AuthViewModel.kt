@@ -65,7 +65,6 @@ class AuthViewModel @Inject constructor(
         val result = repository.login(email, password)
         _loginFlow.value = result
 
-
     }
 
     fun signUp(name: String, email: String, password: String) = viewModelScope.launch {

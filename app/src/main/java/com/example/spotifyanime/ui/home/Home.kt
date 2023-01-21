@@ -36,86 +36,68 @@ fun HomeScreen(viewModel: AuthViewModel?, navController: NavHostController) {
             .fillMaxSize()
             .background(md_theme_light_onSurface)
     ){
-
-        Text(
-            text = stringResource(id = R.string.welcome_back),
-            style = MaterialTheme.typography.headlineSmall,
-            color = spoti_green
-        )
-
-        Text(
-            text = viewModel?.currentUser?.displayName ?: "",
-            style = MaterialTheme.typography.displaySmall,
-            color = spoti_green
-        )
-
-        Image(
-            painter = painterResource(id = R.drawable.ic_baseline_person_24),
-            contentDescription = stringResource(id = R.string.empty),
-            modifier = Modifier.size(128.dp)
-        )
-
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .wrapContentHeight()
-                .padding(spacing.medium)
-        ) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .wrapContentHeight()
-            ) {
-                Text(
-                    text = stringResource(id = R.string.name),
-                    style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.weight(0.3f),
-                    color = spoti_green
-                )
-
-                Text(
-                    text = viewModel?.currentUser?.displayName ?: "",
-                    style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.weight(0.7f),
-                    color = Color.White
-                )
-            }
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .wrapContentHeight()
-            ) {
-                Text(
-                    text = stringResource(id = R.string.email),
-                    style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.weight(0.3f),
-                    color = spoti_green
-                )
-
-                Text(
-                    text = viewModel?.currentUser?.email ?: "",
-                    style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.weight(0.7f),
-                    color = Color.White
-                )
-            }
-
-            Button(
-                onClick = {
-                          viewModel?.logout()
-                    navController.navigate(ROUTE_LOGIN){
-                        popUpTo(ROUTE_HOME) { inclusive = true }
-                    }
-                },
-                colors = ButtonDefaults.buttonColors(containerColor = spoti_green),
-                modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .padding(top = spacing.extraLarge)
-            ) {
-                Text(text = stringResource(id = R.string.logout))
-            }
-        }
+//
+//        Column(
+//            modifier = Modifier
+//                .fillMaxWidth()
+//                .wrapContentHeight()
+//                .padding(spacing.medium)
+//        ) {
+//            Row(
+//                modifier = Modifier
+//                    .fillMaxWidth()
+//                    .wrapContentHeight()
+//            ) {
+//                Text(
+//                    text = stringResource(id = R.string.name),
+//                    style = MaterialTheme.typography.bodyLarge,
+//                    modifier = Modifier.weight(0.3f),
+//                    color = spoti_green
+//                )
+//
+//                Text(
+//                    text = viewModel?.currentUser?.displayName ?: "",
+//                    style = MaterialTheme.typography.bodyLarge,
+//                    modifier = Modifier.weight(0.7f),
+//                    color = Color.White
+//                )
+//            }
+//
+//            Row(
+//                modifier = Modifier
+//                    .fillMaxWidth()
+//                    .wrapContentHeight()
+//            ) {
+//                Text(
+//                    text = stringResource(id = R.string.email),
+//                    style = MaterialTheme.typography.bodyLarge,
+//                    modifier = Modifier.weight(0.3f),
+//                    color = spoti_green
+//                )
+//
+//                Text(
+//                    text = viewModel?.currentUser?.email ?: "",
+//                    style = MaterialTheme.typography.bodyLarge,
+//                    modifier = Modifier.weight(0.7f),
+//                    color = Color.White
+//                )
+//            }
+//
+//            Button(
+//                onClick = {
+//                          viewModel?.logout()
+//                    navController.navigate(ROUTE_LOGIN){
+//                        popUpTo(ROUTE_HOME) { inclusive = true }
+//                    }
+//                },
+//                colors = ButtonDefaults.buttonColors(containerColor = spoti_green),
+//                modifier = Modifier
+//                    .align(Alignment.CenterHorizontally)
+//                    .padding(top = spacing.extraLarge)
+//            ) {
+//                Text(text = stringResource(id = R.string.logout))
+//            }
+//        }
     }
 }
 
